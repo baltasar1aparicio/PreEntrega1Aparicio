@@ -1,9 +1,10 @@
 import React from 'react'
+import { BsCartCheckFill } from "react-icons/bs";
 
 const CartWidget = () => {
   return (
     <div>
-        <h3>Soy el carrito</h3>
+        <button className='cartButton'> <BsCartCheckFill /> </button>
     </div>
   )
 }
