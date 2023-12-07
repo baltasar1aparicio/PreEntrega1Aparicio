@@ -24,7 +24,13 @@
   color: #E3A308;
 }
 
+.text-color:hover {
+  color: #f4e6c4;
+}
+
 .logo {
   font-weight: bold;
   font-size: 30px;
+  
 }
+

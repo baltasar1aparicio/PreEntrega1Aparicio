@@ -2,6 +2,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
+import "./NavBar.css"
+
 
 
 function NavBar() {
@@ -9,12 +12,12 @@ function NavBar() {
     <>
       <Navbar className='navbar-color'>
         <Container>
-          <Navbar.Brand className='text-color logo' href="#home"> GeekStore </Navbar.Brand>
-          <Nav className="me-auto links">
-            <Nav.Link className='text-color' href="#figures">Figuras</Nav.Link>
-            <Nav.Link className='text-color' href="#clothes">Prendas</Nav.Link>
-            <Nav.Link className='text-color' href="#other">Varios</Nav.Link>
-            <Nav.Link href="#cart"> <CartWidget /> </Nav.Link>
+          <Navbar.Brand className='text-color' as={Link} to="/"> GeekStore </Navbar.Brand>
+          <Nav className='navlinks-caracteristicas'>
+            <Link className='text-color' to="/category/naruto">Naruto</Link>
+            <Link className='text-color' to="/category/onepiece">One Piece</Link>
+            <Link className='text-color' to="/category/jujutsukaisen">Jujutsu Kaisen</Link>
+            <Link to="/cart"> <CartWidget /> </Link>
           </Nav>
         </Container>
       </Navbar>
